@@ -1,0 +1,248 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "Inter", sans-serif !important;
+}
+
+body {
+	color: white;
+}
+
+.ant-modal-content {
+	padding: 0 !important;
+}
+
+.with-blur {
+	position: relative;
+}
+
+.with-blur:after {
+	content: "";
+	background: url(/images/blur.png);
+	width: 88px;
+	height: 77px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+:root {
+	--bg-color: #000;
+	--blue: #0263eb;
+	--green: #33cc99;
+	--border: rgb(48, 48, 48);
+	--border-radius: 6px;
+	--header-table: #fff6;
+	--blue20: #0263eb20;
+	--green20: #59edf120;
+}
+
+:root ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+/* Thay đổi màu nền của thanh cuộn */
+
+:root ::-webkit-scrollbar-track {
+	background: #171423;
+}
+
+:root:has(.dark-mode) ::-webkit-scrollbar-track {
+	background: #242332;
+}
+
+/* Tùy chỉnh màu sắc của phần thanh cuộn */
+
+:root ::-webkit-scrollbar-thumb {
+	background: #242332;
+	border-radius: 4px;
+}
+
+/* Tùy chỉnh màu sắc của phần thanh cuộn khi hover */
+
+:root ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.ant-modal-content {
+	padding: 0 !important;
+}
+
+.with-blur {
+	position: relative;
+}
+
+.with-blur:after {
+	content: "";
+	background: url(/images/blur.png);
+	width: 88px;
+	height: 77px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+:root ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+/* Thay đổi màu nền của thanh cuộn */
+
+:root ::-webkit-scrollbar-track {
+	background: #171423;
+}
+
+:root:has(.dark-mode) ::-webkit-scrollbar-track {
+	background: #242332;
+}
+
+/* Tùy chỉnh màu sắc của phần thanh cuộn */
+
+:root ::-webkit-scrollbar-thumb {
+	background: #242332;
+	border-radius: 4px;
+}
+
+/* Tùy chỉnh màu sắc của phần thanh cuộn khi hover */
+
+:root ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.boxShadowNextBtnSlide {
+	box-shadow:
+		0px 8px 20px 0px rgba(0, 0, 0, 0.02),
+		0px 1px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+.curve:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -24px;
+	width: 42px;
+	height: 100%;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 2px 2px 2px 0;
+	border-radius: 0 8px 0 0;
+	transform: skewX(20deg);
+	background-color: inherit;
+	z-index: 10;
+}
+
+.curve {
+	position: relative;
+}
+
+.bg-banner {
+	background: url("/images/banner-desktop.png");
+	background-repeat: no-repeat;
+}
+
+.bg-circle-right {
+	background: url("/images/bg-circle-right.png"), url("/images/bg-circle-left.png");
+	background-position:
+		top right,
+		top left;
+	background-repeat: no-repeat;
+}
+
+.animation-1 {
+	width: 40px;
+	height: 40px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+}
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.box-shadow-card {
+	box-shadow:
+		0 4px 8px 0 rgba(0, 0, 0, 0.2),
+		0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.renderhtml {
+	overflow: hidden;
+}
+.renderhtml figure {
+	display: flex;
+}
+.renderhtml img {
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.renderhtml h1 {
+	font-size: 2em; /* Đặt kích thước font của h1 */
+	font-weight: bold; /* Đặt độ đậm của font cho h1 */
+}
+
+.renderhtml h2 {
+	font-size: 1.5em; /* Đặt kích thước font của h2 */
+	font-weight: bold; /* Đặt độ đậm của font cho h2 */
+}
+
+.renderhtml h3 {
+	font-size: 1.17em; /* Đặt kích thước font của h3 */
+	font-weight: bold; /* Đặt độ đậm của font cho h3 */
+}
+
+.renderhtml h4 {
+	font-size: 1em; /* Đặt kích thước font của h4 */
+	font-weight: bold; /* Đặt độ đậm của font cho h4 */
+}
+
+.renderhtml a {
+	color: rgb(67, 163, 22);
+}
+
+.gradient-border,
+.gradient-border:hover {
+	border: 1px solid transparent;
+	border: 1px solid;
+	border-image: linear-gradient(10deg, var(--blue) 21%, var(--green) 90%) 1 !important;
+	font-weight: 600;
+	transition:
+		all 0.3s ease,
+		transform 0.3s ease;
+}
+
+.gradient-btn-blue {
+	background: linear-gradient(10deg, var(--blue) 21%, var(--green) 90%) !important;
+	border: 1px;
+	border-radius: 30px !important;
+	font-weight: 600;
+	color: white;
+}
+
+.gradient-border-wallet,
+.gradient-border-wallet:hover {
+	border: 1px solid;
+	border-image: linear-gradient(10deg, var(--blue) 21%, var(--green) 90%) 1;
+	font-weight: 700;
+	color: white;
+	background-color: transparent !important;
+	padding: 8px;
+}
