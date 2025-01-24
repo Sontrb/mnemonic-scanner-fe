@@ -1,5 +1,4 @@
 import { actionSelector } from "@/redux/slices/action.slice";
-import { useIsLogin } from "@/redux/slices/auth.slice";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useAccount } from "wagmi";
@@ -8,7 +7,6 @@ const useChainId = () => {
 	const { chain, connector, isConnected } = useAccount();
 	const { isVisibleModalSwitchNetwork } = useSelector(actionSelector);
 	const [chainId, setChainId] = useState(0);
-	const isLogin = useIsLogin();
 
 	useEffect(() => {
 		const checkChainChanged = async () => {
@@ -18,7 +16,7 @@ const useChainId = () => {
 			}
 		};
 		checkChainChanged();
-	}, [chain, connector, isConnected, isLogin, isVisibleModalSwitchNetwork]);
+	}, [chain, connector, isConnected, isVisibleModalSwitchNetwork]);
 
 	return chainId;
 };

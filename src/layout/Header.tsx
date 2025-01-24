@@ -1,28 +1,19 @@
 "use client";
 
-import useLogout from "@/hooks/useLogout";
 import ConnectWallet from "@/components/Wallet";
-import { LANG, USER_LEVEL } from "@/constants";
-import {
-	FileProtectOutlined,
-	FolderOpenFilled,
-	HomeOutlined,
-	PieChartOutlined,
-	SettingOutlined,
-	TeamOutlined,
-	UnorderedListOutlined,
-	UserOutlined,
-} from "@ant-design/icons";
+import { LANG } from "@/constants";
+import useLogout from "@/hooks/useLogout";
+import { changeLanguage, useLanguage } from "@/redux/slices/system.slice";
+import { isMobile } from "@/utils/common";
+import { UnorderedListOutlined } from "@ant-design/icons";
 import { Button, Dropdown } from "antd";
+import i18next from "i18next";
+import moment from "moment";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { isMobile } from "@/utils/common";
-import { changeLanguage, useLanguage } from "@/redux/slices/system.slice";
 import { useDispatch } from "react-redux";
-import i18next from "i18next";
-import moment from "moment";
 
 const HeaderCustome = () => {
 	const lang = useLanguage();
